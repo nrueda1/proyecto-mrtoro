@@ -4,6 +4,7 @@ const Register_admin = async(request,response) => {
     try {
         const {nombre,apellido,numero_de_documento,correo_electronico,contraseña,tipo_documento_id_documento,tipo_usuario} = request.body
         const resultado = await registerFunction(nombre,apellido,numero_de_documento,correo_electronico,contraseña,tipo_documento_id_documento,tipo_usuario);
+        console.log(resultado)
         if(resultado === "Usuario Registrado" ){
             response.status(200);
             response.json("Usuario Registrado");

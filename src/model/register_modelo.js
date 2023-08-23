@@ -18,6 +18,7 @@ async function registerFunction(nombre,apellido,numero_de_documento,correo_elect
             return "Usuario Registrado"
         }
     } catch (error) {
+        console.log(error)
         return "Error"
     }
       
